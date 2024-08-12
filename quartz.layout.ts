@@ -9,8 +9,7 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/binn328",
-      About: "https://binn328.com/about",
-      Email: "binn328@binn328.com"
+      About: "https://binn328.com/About",
     },
   }),
 }
@@ -27,12 +26,11 @@ export const defaultContentPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
+    Component.DesktopOnly(Component.TableOfContents()),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
-    Component.Graph(),
-    Component.DesktopOnly(Component.TableOfContents()),
+    Component.Explorer(),
     Component.Backlinks(),
   ],
 }
